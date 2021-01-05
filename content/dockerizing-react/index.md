@@ -3,6 +3,7 @@ title = "Dockerize Create React App"
 description = "I'm relatively new to using Docker and wanted a quick way to spin up a small React application using Docker so I could easily share it as a proof of concept for features I develop at work. Here's a quick guide to dockerizing a React app made with create-react-app."
 slug = "dockerizing-react"
 date = 2021-01-02
+draft = true
 
 [taxonomies]
 categories = ["development"]
