@@ -14,7 +14,7 @@ build_search_index = false
 generate_feed = true
 feed_filename = "rss.xml"
 
-theme = "after-dark"
+theme = "zerm"
 
 taxonomies = [
     {name = "categories", rss = true},
@@ -22,10 +22,28 @@ taxonomies = [
 ]
 
 [extra]
-after_dark_menu = [
-    {url = "$BASE_URL", name = "Home"},
-    {url = "$BASE_URL/categories", name = "Categories"},
-    {url = "$BASE_URL/tags", name = "Tags"},
-    {url = "https://github.com/juliusdelta", name = "Github"},
+author = "JD"
+show_author = false
+show_categories = true
+show_tags = true
+theme_color = "blue"
+center = true
+show_menu_items = 2
+logo_text = "JDs Work"
+logo_home_link = "/"
+main_menu = [
+    {url="/about/", name="about"}
 ]
-after_dark_title = "JDs Work"
+menu_more = "show more"
+read_more = "read more"
+
+# not currently used from previous theme, but leaving here for now in case I
+# feel like adding it.
+#read_other_posts = "read other posts"
+# after_dark_menu = [
+#     {url = "$BASE_URL", name = "Home"},
+#     {url = "$BASE_URL/categories", name = "Categories"},
+#     {url = "$BASE_URL/tags", name = "Tags"},
+#     {url = "https://github.com/juliusdelta", name = "Github"},
+# ]
+# after_dark_title = "JDs Work"
