@@ -195,5 +195,4 @@ This has a few key implications for dotfiles in general:
 - You can document you code fairly consistently, and with GH support for Org markup it's even easier to document your configs so you always remember what the one function does in your `.zshrc` file.
 - Your dotfiles will be dependent on Emacs but the code is always there. If for whatever reason you can't use Emacs to put your dotfiles in place you can always just copy the source blocks manually :)
 
-The Emacs community has popularized this technique and has aptly called it "literate configuration" which is a suitable name. There are
-I'm currently in the process of converting all my dotfiles into a simple repo of org files this way and I couldn't be more excited to actually have organized dotfiles.
+The Emacs community has popularized this technique and has aptly called it "literate configuration" which is a suitable name. I'm currently in the process of converting all my dotfiles into a simple repo of org files this way and I couldn't be more excited to actually have organized dotfiles.
