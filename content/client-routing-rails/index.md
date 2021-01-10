@@ -2,7 +2,7 @@
 title = "Resolving client side routes in Rails"
 date = 2021-01-09
 slug = "/client-routes-rails"
-description = ""
+description = "Tell Rails to pass routes to a client with a nifty helper."
 draft = false
 
 [taxonomies]
@@ -10,7 +10,7 @@ categories = ["development"]
 tags = ["rails", "ruby"]
 +++
 
-There's a quick and easy way to satisfy client side routing in a Rails application. Rails will automatically try to resolve it's routing on the server side and throw an immediate 404 if no valid pages exists. Since my main application at work is a React SPA I needed a way to resolve routes to the client and not let them get caught by the server and error. The `(/*path)` method route 'helper' allows through any route so it can then be handled elsewhere. 
+There's a quick and easy way to satisfy client side routing in a Rails application. Rails will automatically try to resolve it's routing on the server side and throw an immediate 404 if no valid pages exist. Since my main application at work is a React SPA I needed a way to resolve routes to the client and not let them get caught by the server and throw a 404. The `(/*path)` method route 'helper' allows through any route so it can then be handled elsewhere. 
 
 ```ruby
 get '/app(/*path)', to: 'my_app#index'
