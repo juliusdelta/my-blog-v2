@@ -10,6 +10,3 @@ I'm JD Gonzales. I'm a developer based out of Dallas, Texas. I specialize in bui
 
 - [Github](https://github.com/juliusdelta)
 - [Twitter](https://twitter.com/juliusdelta)
-
-
-_Theme made by <a href="https://github.com/ejmg">ejmg</a>_

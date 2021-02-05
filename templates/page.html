@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ config.default_language }}">
+  <head>
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/simple.css">
+  </head>
+  <body>
+    <header>
+      <a href="{{ config.base_url }}">{{ config.extra.logo_text }}</a>
+      <nav>
+        {% for item in config.extra.menu_links %}
+          {% set link_url = item.url | replace(from="$BASE_URL", to=config.base_url) %}
+          <a href="{{ link_url }}">{{ item.name }}</a>
+        {% endfor %}
+      </nav>
+    </header>
+    <main>
+      <h1>
+        <a href="{{ page.permalink  }}">{{ page.title }}</a>
+      </h1>
+      <article>
+        {{ page.content | safe }}
+      </article>
+    </main>
+  </body>
+</html>
