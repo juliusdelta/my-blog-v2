@@ -22,5 +22,8 @@
         {{ page.content | safe }}
       </article>
     </main>
+    <footer>
+      <span>&copy; {{ now() | date(format="%Y") }} :: JD Gonzales :: Powered by <a href="https://www.getzola.org/">Zola</a></span>
+    </footer>
   </body>
 </html>

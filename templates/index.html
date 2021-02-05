@@ -15,19 +15,20 @@
       </nav>
     </header>
     <main>
-      {% if paginator %}
-        {%- for page in paginator.pages -%}
-          <h1>
-            <a href="{{ page.permalink }}">{{ page.title }}</a>
-          </h1>
-          {%  if page.description -%}
-            {{ page.description }}
-          {%  endif -%}
-          {% if page.description -%}
-            <a href="{{ page.permalink }}">Read More</a>
-          {% endif -%}
-        {%- endfor -%}
-      {% endif %}
+      {%- for page in paginator.pages -%}
+        <h1>
+          <a href="{{ page.permalink }}">{{ page.title }}</a>
+        </h1>
+        {%  if page.description -%}
+          {{ page.description }}
+        {%  endif -%}
+        {% if page.description -%}
+          <a href="{{ page.permalink }}">Read More</a>
+        {% endif -%}
+      {%- endfor -%}
     </main>
+    <footer>
+      <span>&copy; {{ now() | date(format="%Y") }} :: JD Gonzales :: Powered by <a href="https://www.getzola.org/">Zola</a></span>
+    </footer>
   </body>
 </html>
