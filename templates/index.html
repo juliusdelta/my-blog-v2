@@ -1,34 +1,28 @@
-<!DOCTYPE html>
-<html lang="{{ config.default_language }}">
-  <head>
-    <title>{{ config.title }}</title>
-    <link rel="stylesheet" href="/simple.css" }}">
-  </head>
-  <body>
-    <header>
-      <a href="{{ config.base_url }}">{{ config.extra.logo_text }}</a>
-      <nav>
-        {% for item in config.extra.menu_links %}
-          {% set link_url = item.url | replace(from="$BASE_URL", to=config.base_url) %}
-          <a href="{{ link_url }}">{{ item.name }}</a>
-        {% endfor %}
-      </nav>
-    </header>
-    <main>
-      {%- for page in paginator.pages -%}
-        <h1>
-          <a href="{{ page.permalink }}">{{ page.title }}</a>
-        </h1>
-        {%  if page.description -%}
-          {{ page.description }}
-        {%  endif -%}
-        {% if page.description -%}
-          <a href="{{ page.permalink }}">Read More</a>
-        {% endif -%}
-      {%- endfor -%}
-    </main>
-    <footer>
-      <span>&copy; {{ now() | date(format="%Y") }} :: JD Gonzales :: Powered by <a href="https://www.getzola.org/">Zola</a></span>
-    </footer>
-  </body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}
+  {{ config.title }}
+{% endblock  %}
+
+{% block content %}
+  {%- for page in paginator.pages -%}
+    <h1>
+      <a href="{{ page.permalink }}">{{ page.title }}</a>
+    </h1>
+    {%  if page.description -%}
+      {{ page.description }}
+    {%  endif -%}
+
+    {% if page.description -%}
+      <a href="{{ page.permalink }}">Read More</a>
+    {% endif -%}
+  {%- endfor -%}
+   <nav>
+     {% if paginator.previous %}
+       <a href="{{ paginator.previous }}">< Previous</a>
+     {% endif %}
+     {% if paginator.next %}
+       <a href="{{ paginator.next }}">Next ></a>
+     {% endif %}
+   </nav>
+{% endblock %}

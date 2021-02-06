@@ -1,29 +1,40 @@
-<!DOCTYPE html>
-<html lang="{{ config.default_language }}">
-  <head>
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/simple.css">
-  </head>
-  <body>
-    <header>
-      <a href="{{ config.base_url }}">{{ config.extra.logo_text }}</a>
-      <nav>
-        {% for item in config.extra.menu_links %}
-          {% set link_url = item.url | replace(from="$BASE_URL", to=config.base_url) %}
-          <a href="{{ link_url }}">{{ item.name }}</a>
-        {% endfor %}
-      </nav>
-    </header>
-    <main>
-      <h1>
-        <a href="{{ page.permalink  }}">{{ page.title }}</a>
-      </h1>
-      <article>
-        {{ page.content | safe }}
-      </article>
-    </main>
-    <footer>
-      <span>&copy; {{ now() | date(format="%Y") }} :: JD Gonzales :: Powered by <a href="https://www.getzola.org/">Zola</a></span>
-    </footer>
-  </body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}
+  {{ page.title }}
+{% endblock %}
+
+{% block content %}
+<h1>
+  <a href="{{ page.permalink  }}">{{ page.title }}</a>
+</h1>
+<section>
+  <h6>
+    Category:
+  {% for category in page.taxonomies['categories'] %}
+    <a href="{{ get_taxonomy_url(kind="categories", name=category) | safe }}">
+      {{ category | title }}
+    </a>
+  {% endfor %}
+  </h6>
+  <h6>
+    <span>
+      Tags:
+      {% for tag in page.taxonomies['tags'] %}
+        <a href="{{ get_taxonomy_url(kind="tags", name=tag) | safe }}">
+          {% if loop.index == page.taxonomies['tags'] | length - 1 %}
+            {{ tag }},
+          {% else %}
+            {{ tag }}
+          {% endif %}
+        </a>
+      {% endfor %}
+    </span>
+  </h6>
+</section>
+<section>
+  <article>
+    {{ page.content | safe }}
+  </article>
+</section>
+{% endblock %}

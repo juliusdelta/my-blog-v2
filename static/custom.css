@@ -1,0 +1,27 @@
+/* :root { */
+/*   --bg: #202020; */
+/*   --accent-bg: #3F3F3F; */
+/*   --text: #DCDCDC; */
+/*   --text-light: #ABABAB; */
+/*   --border: #666; */
+/*   --accent: #FFDF6C; */
+/*   --accent-light: #FFECB3; */
+/*   --code: #ABABAB; */
+/*   --preformatted: #CCC; */
+/* } */
+
+header h5 {
+  margin: 1rem 0;
+}
+
+header nav {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
