@@ -4,17 +4,18 @@
     <title>
       {% block title %} {% endblock %}
     </title>
-    <!-- <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml", trailing_slash=false) }}"> -->
-    <link rel="stylesheet" href="/simple.css">
+    <link rel="stylesheet" href="/simple.min.css">
     <link rel="stylesheet" href="/custom.css">
     {% block rss %}
-      <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml", trailing_slash=false) }}">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml", trailing_slash=false) }}">
     {% endblock %}
+
+    {% block meta %} {% endblock %}
   </head>
   <body>
     <header>
       <a href="{{ config.base_url }}"><h1>{{ config.extra.logo_text }}</h1></a>
-      <h5>{{ config.description }}</h5>
+      <p>{{ config.description }}</p>
       <nav>
         {% for item in config.extra.menu_links %}
           {% set link_url = item.url | replace(from="$BASE_URL", to=config.base_url) %}

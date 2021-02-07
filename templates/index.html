@@ -4,6 +4,24 @@
   {{ config.title }}
 {% endblock  %}
 
+{% block meta%}
+<meta name="description" content="{{ config.description }}">
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="{{ config.base_url }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ config.extra.logo_text }}">
+<meta property="og:description" content="{{ config.description }}">
+<meta property="og:image" content="">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:domain" content="{{ config.base_url }}">
+<meta property="twitter:url" content="{{ config.base_url }}">
+<meta name="twitter:title" content="{{ config.extra.logo_text }}">
+<meta name="twitter:description" content="{{ config.description }}">
+<meta name="twitter:image" content="">
+{% endblock %}
+
 {% block content %}
   {%- for page in paginator.pages -%}
     <h1>

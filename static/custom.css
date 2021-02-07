@@ -1,22 +1,35 @@
-/* :root { */
-/*   --bg: #202020; */
-/*   --accent-bg: #3F3F3F; */
-/*   --text: #DCDCDC; */
-/*   --text-light: #ABABAB; */
-/*   --border: #666; */
-/*   --accent: #FFDF6C; */
-/*   --accent-light: #FFECB3; */
-/*   --code: #ABABAB; */
-/*   --preformatted: #CCC; */
-/* } */
-
-header h5 {
-  margin: 1rem 0;
+/* /\** Overwrite default to only be "light mode" theme from simple.css *\/ */
+:root {
+  --bg: #2e3440;
+  --accent-bg: #3b4252;
+  --text: #d8dee9;
+  --text-light: #585858;
+  --border: #D8DAE1;
+  --accent: #88c0d0;
+  --accent-light: #90CAF9;
+  --code: #81a1c1;
+  --preformatted: #444;
+  --marked: #bf616a;
 }
 
-header nav {
-  padding: 0;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #2e3440;
+    --accent-bg: #3b4252;
+    --text: #d8dee9;
+    --text-light: #585858;
+    --border: #D8DAE1;
+    --accent: #88c0d0;
+    --accent-light: #90CAF9;
+    --code: #81a1c1;
+    --preformatted: #444;
+    --marked: #bf616a;
+  }
+  img, video {
+    opacity: .6;
+  }
 }
+/** End Overwrite */
 
 a {
   text-decoration: none;
@@ -24,4 +37,20 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+header {
+  border: none;
+}
+
+/** Posts */
+main > section.taxonomies {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+main > hr {
+  border: 1px solid var(--accent);
+  margin-bottom: 3rem;
 }
