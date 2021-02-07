@@ -44,10 +44,10 @@
     {% for tag in page.taxonomies['tags'] %}
     <a href="{{ get_taxonomy_url(kind="tags", name=tag) | safe }}">
       <h6>
-        {% if loop.index == page.taxonomies['tags'] | length - 1 %}
-          {{ tag }},&nbsp;
+        {% if loop.index == page.taxonomies['tags'] | length %}
+          {{ tag }}&nbsp;
         {% else %}
-          {{ tag }}
+          {{ tag }},&nbsp;
         {% endif %}
       </h6>
     </a>
