@@ -10,6 +10,7 @@
   --code: #81a1c1;
   --preformatted: #444;
   --marked: #bf616a;
+  --icon: #EBCB8B;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,6 +25,7 @@
     --code: #81a1c1;
     --preformatted: #444;
     --marked: #bf616a;
+    --icon: #EBCB8B;
   }
   img, video {
     opacity: .6;
@@ -31,6 +33,7 @@
 }
 /** End Overwrite */
 
+/** Global */
 a {
   text-decoration: none;
 }
@@ -38,9 +41,19 @@ a {
 a:hover {
   text-decoration: underline;
 }
+/** End Global */
 
 header {
   border: none;
+}
+
+header > a.rss-icon {
+  border: none;
+  fill: var(--icon);
+}
+
+header > a.rss-icon:hover {
+  fill: var(--text)
 }
 
 /** Posts */
@@ -53,4 +66,23 @@ main > section.taxonomies {
 main > hr {
   border: 1px solid var(--accent);
   margin-bottom: 3rem;
+}
+
+section.taxonomies {
+  fill: var(--icon);
+}
+
+section.taxonomies > .tags {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+section.taxonomies > .tags > svg {
+  margin: 6px 6px 0px 0px;
+}
+
+section.taxonomies > .category {
+  display: flex;
+  flex-direction: row;
 }

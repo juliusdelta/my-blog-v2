@@ -27,28 +27,32 @@
   <a href="{{ page.permalink  }}">{{ page.title }}</a>
 </h1>
 <section class="taxonomies">
-  <h6>
-    Category:
-  {% for category in page.taxonomies['categories'] %}
-    <a href="{{ get_taxonomy_url(kind="categories", name=category) | safe }}">
-      {{ category | title }}
+  <div class="category">
+    <h6>Category:&nbsp;</h6>
+    {% for category in page.taxonomies['categories'] %}
+      <a href="{{ get_taxonomy_url(kind="categories", name=category) | safe }}">
+        <h6>
+          {{ category | title }}
+        </h6>
+      </a>
+    {% endfor %}
+  </div>
+
+  <div class="tags">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path d="M10.773 21.585l-1.368 1.415-10.405-10.429v-8.571h2v7.719l9.773 9.866zm1.999-20.585h-9.772v9.772l12.074 12.228 9.926-9.85-12.228-12.15zm-4.772 7c-1.105 0-2-.895-2-2s.895-2 2-2 2 .895 2 2-.895 2-2 2z"/></svg>
+
+    {% for tag in page.taxonomies['tags'] %}
+    <a href="{{ get_taxonomy_url(kind="tags", name=tag) | safe }}">
+      <h6>
+        {% if loop.index == page.taxonomies['tags'] | length - 1 %}
+          {{ tag }},&nbsp;
+        {% else %}
+          {{ tag }}
+        {% endif %}
+      </h6>
     </a>
-  {% endfor %}
-  </h6>
-  <h6>
-    <span>
-      Tags:
-      {% for tag in page.taxonomies['tags'] %}
-        <a href="{{ get_taxonomy_url(kind="tags", name=tag) | safe }}">
-          {% if loop.index == page.taxonomies['tags'] | length - 1 %}
-            {{ tag }},
-          {% else %}
-            {{ tag }}
-          {% endif %}
-        </a>
-      {% endfor %}
-    </span>
-  </h6>
+    {% endfor %}
+  </div>
 </section>
 <hr>
 <section>
