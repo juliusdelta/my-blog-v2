@@ -1,6 +1,6 @@
 +++
 title = "Uses"
-date = 2019-11-27
+date = 2021-02-05
 path = "uses"
 +++
 
@@ -23,7 +23,7 @@ path = "uses"
 - Github
 
 ### Wishlist
-There are several OSS technologies I want to put to use.
+There are several FOSS technologies I want to put to use in the near term.
 
 - Goat Counter
 This is an analytics tool that can be self-hosted. It also has privacy as a priority so no cookies or really any tracking of user agents or PID. Just used for analytics
