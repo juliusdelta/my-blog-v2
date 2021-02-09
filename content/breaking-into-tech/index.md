@@ -11,9 +11,7 @@ tags = ["advice"]
 
 +++
 
-# Tips for Breaking into Tech
-
-**This is a repost of my original 2017 blog post. It maybe a little outdated.**
+> **This is a repost of my original 2017 blog post. It maybe a little outdated.**
 
 I recently got my first developer job as a Quality Assurance Engineer at a company called [Modern Message](http://modernmsg.com) and I want to share a few tips on things I did to help me eventually land this job.
 <!--more-->
