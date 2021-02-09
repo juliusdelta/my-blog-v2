@@ -5,12 +5,14 @@
 {% endblock  %}
 
 {% block content %}
-  <h1>Tag: {{ term.name | title }}</h1>
+  <h1>{{ term.name | title }}</h1>
   {% for page in term.pages %}
   <section>
     <a href="{{ page.path }}"><h4>{{ page.title }}</h4></a>
     <p>{{ page.description }}</p>
   </section>
+  {% if loop.index != term.pages | length %}
   <hr>
+  {% endif %}
   {% endfor %}
 {% endblock %}
