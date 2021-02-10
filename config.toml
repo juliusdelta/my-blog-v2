@@ -24,4 +24,4 @@ menu_links = [
   { url = "$BASE_URL/about/", name = "About" },
 ]
 github_url = "https://github.com/juliusdelta"
-mastodon_url = "https://fosstodon.org/web/accounts/310367#"
+mastodon_url = "https://fosstodon.org/@Juliusdelta"
