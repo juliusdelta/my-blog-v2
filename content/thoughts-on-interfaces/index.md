@@ -61,4 +61,4 @@ The moral of the story is to take time to consider how your model should behave 
 ## Definitions
 <a id="1">[1]</a> 
 **Allow List Revocation Strategy:**
-This is a token revocation strategy that uses stored values to validate that a token is valid. Look ups for the token are used to ensure it's valid. If a token is not found in the table, then authentication fails. Revoking is essentially destroying a column in the token table. [Devise based resource](https://github.com/waiting-for-dev/devise-jwt#allowlist).
+This is a token revocation strategy that uses stored values to validate that a token is valid. Look ups for the token are used to ensure it's valid. If a token is not found in the table, then authentication fails. Revoking is essentially destroying a record in the token table. [Devise based resource](https://github.com/waiting-for-dev/devise-jwt#allowlist).
