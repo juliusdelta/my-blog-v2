@@ -42,4 +42,3 @@ Software Engineering Certificate
 - Computer science fundamentals and in depth SQL
 - Built ORM
 
-
