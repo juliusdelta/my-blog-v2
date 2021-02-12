@@ -40,6 +40,8 @@ Emacs houses a lot of other functionality that I would use other apps for. It's 
 - [ErgoDox EZ](https://ergodox-ez.com/)
 - [BeyerDynamic DT 770 Pro Headphones](https://north-america.beyerdynamic.com/dt-770-pro.html)
 
+- [My Ergodox custom layout](https://configure.ergodox-ez.com/ergodox-ez/layouts/XE5Vg/latest/0)
+
 For my day job:
 - 16" MacBook Pro late 2020
 - LG Ultrafine 5k Display
