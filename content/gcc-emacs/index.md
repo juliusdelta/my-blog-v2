@@ -7,7 +7,7 @@ draft = false
 
 [taxonomies]
 categories = ["development"]
-tags = ["#100DaysToOffload", "emacs", "docker"]
+tags = ["#100DaysToOffload", "emacs"]
 +++
 
 {{ offload(number = 3) }}
