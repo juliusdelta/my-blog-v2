@@ -12,8 +12,10 @@ taxonomies = [
     {name = "categories", rss = true},
     {name = "tags", rss = true},
 ]
+
+[markdown]
 highlight_code = true
-highlight_them = "nord"
+highlight_theme = "nord"
 
 [extra]
 logo_text = "JDs Work"
