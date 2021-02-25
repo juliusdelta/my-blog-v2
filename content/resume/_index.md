@@ -47,6 +47,10 @@ __Independent Contractor for Audiio__
 - Developed custom analytics abstraction to assist in identifying user behavior and utilize A/B testing.
 - Strategized and implemented the (still on going) rewrite of a frontend application into React.
 
+`@Audiio`
+- Worked to develop strategy for structuring reusable components for future team.
+- Refactored CSS architecture to follow BEM conventions.
+
 ## Open Source Contributions
 - __Webpacker__: Rails wrapper around Webpack for asset management.
 - __Diesel__: A query builder/ORM for Rust.
@@ -63,7 +67,6 @@ Software Engineering (1 year)
 
 `2011-2013`
 __Dallas Baptist University__
-(Did not graduate)
-Bachelors in Biology
+Assiciates of Science
 
 
