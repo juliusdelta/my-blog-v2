@@ -67,6 +67,6 @@ Software Engineering (1 year)
 
 `2011-2013`
 __Dallas Baptist University__
-Assiciates of Science
+Associates of Science
 
 
