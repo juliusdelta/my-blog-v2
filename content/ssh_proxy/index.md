@@ -1,6 +1,6 @@
 +++
 title = "Using SSH Tunneling"
-description = "I've always had complaints about emacs performance but the latest native compilation branch squashes any concerns I have with it."
+description = "Use SSH Dynamic Port Forwarding/Tunnel to route web traffic."
 slug = "ssh-tunneling"
 date = 2021-03-01
 draft = false
