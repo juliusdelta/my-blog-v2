@@ -1,16 +1,37 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
+
+
+
+{% block seo -%}
+  {{ super() }}
+
+  {%- set home = "404" -%}
+  {% set og_title = home -%}
+
+  {% if config.title -%}
+  	{% set title = home ~ " | " ~ config.title -%}
+  {% else -%}
+	{% set title = home -%}
+  {% endif -%}
+
+  {% set web_type = "WebPage" -%}
+  
+  {{ macros::seo(title=title, og_title=og_title, author=author, description=description, site_url=site_url, image=image, image_height=image_height, image_width=image_width, web_type=web_type) }}
+{%- endblock seo %}
+
 
 
 {% block content %}
-<section class="not-found">
-  <pre>
-   __ __  ____  __ __     ____                                  __     ____                      ____
-  / // / / __ \/ // /    / __ \____ _____ ____     ____  ____  / /_   / __/___  __  ______  ____/ / /
- / // /_/ / / / // /_   / /_/ / __ `/ __ `/ _ \   / __ \/ __ \/ __/  / /_/ __ \/ / / / __ \/ __  / /
-/__  __/ /_/ /__  __/  / ____/ /_/ / /_/ /  __/  / / / / /_/ / /_   / __/ /_/ / /_/ / / / / /_/ /_/
-  /_/  \____/  /_/    /_/    \__,_/\__, /\___/  /_/ /_/\____/\__/  /_/  \____/\__,_/_/ /_/\__,_(_)
-                                  /____/
-  </pre>
-  <a href="/about"><h3>How bout bout you read about me instead?</h3></a>
-</section>
-{% endblock %}
+<div class="notfound">
+	<h1 class="notfound-error">{{ config.extra.expressions.p404 | default(value="404: Page not found") }}</h1>
+	<div class="notfound-line"></div>
+	<p class="notfound-message">
+		{{ config.extra.expressions.p404_info | default(value="Oops! We can't seem to find the page you are looking for.") | safe }} {{ config.extra.expressions.p404_back_home_start | default(value="Let's") |
+		safe }}
+		<a href="{{ config.base_url | safe }}">{{ config.extra.expressions.p404_back_home_with_link | default(value="head back home") |
+		safe }}</a>{{ config.extra.expressions.p404_back_home_end | default(value=".") |
+		safe }}
+	</p>
+	<p></p>
+</div>
+{% endblock content %}

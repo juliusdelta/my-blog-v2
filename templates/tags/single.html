@@ -1,18 +1,37 @@
 {% extends "base.html" %}
 
-{% block title %}
-  {{ config.title }} - {{ taxonomy.name }}
-{% endblock  %}
+
+
+{% block seo -%}
+  {{ super() }}
+
+  {%- set og_title = term.name -%}
+	
+  {% if config.title -%}
+    {% set title = term.name ~ " | " ~ config.title -%}
+  {% else -%}
+    {% set title = term.name -%}
+  {% endif -%}
+
+  {% set web_type = "WebPage" -%}
+  
+  {{ macros::seo(title=title, og_title=og_title, author=author, description=description, site_url=site_url, image=image, image_height=image_height, image_width=image_width, web_type=web_type) }}
+{%- endblock seo %}
+
+
+
 
 {% block content %}
-  <h1>{{ term.name | title }}</h1>
-  {% for page in term.pages %}
-  <section>
-    <a href="{{ page.path }}"><h4>{{ page.title }}</h4></a>
-    <p>{{ page.description }}</p>
-  </section>
-  {% if loop.index != term.pages | length %}
-  <hr>
-  {% endif %}
-  {% endfor %}
-{% endblock %}
+<div class="tags">
+	<div class="tags-header">
+		<h2 class="tags-header-title">{{ term.name }}</h2>
+		<div class="tags-header-line"></div>
+	</div>
+</div>
+
+<div class="catalogue">
+	{% for page in term.pages -%}
+		{{ macros::page(page=page) }}
+	{%- endfor %}
+</div>
+{% endblock content %}
