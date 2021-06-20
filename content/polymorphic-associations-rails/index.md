@@ -1,7 +1,7 @@
 +++
-title = "Double Polymorphic Associations Rails"
+title = "Double Polymorphic Associations in Rails"
 description = "A quick overview of using associations to define good domain descriptions as well as good behavior."
-slug = "polymorphic-associations"
+slug = "double-polymorphic-associations"
 date = 2021-05-31
 draft = false
 
