@@ -17,9 +17,24 @@ taxonomies = [
 highlight_code = true
 highlight_theme = "inspired-github"
 
-[extra]
-github_url = "https://github.com/juliusdelta"
-mastodon_url = "https://fosstodon.org/@Juliusdelta"
-
 [extra.expressions]
 pinned = "Written On"
+
+[extra.seo]
+image = "assets/default.jpg"
+
+[[extra.menu]]
+name = "Categories"
+url = "/categories"
+
+[[extra.menu]]
+name = "Tags"
+url = "/tags"
+
+[[extra.menu]]
+name = "Uses"
+url = "/uses"
+
+[[extra.menu]]
+name = "About"
+url = "/about"

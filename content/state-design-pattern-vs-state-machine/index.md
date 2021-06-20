@@ -21,6 +21,7 @@ A lot of state machines require code to be placed directly in the model and have
 I highly recommend picking up a copy of Design Patterns: Elements of Resuable Object Oriented Software as these patterns are rather timeless and the material is easily referenceable.
 
 ### State Design Pattern
+![state design uml diagram](./uml1.png)
 #### Overview
 The State Design pattern that at it's core allows you to manage your objects state specific behavior in a state object concrete class. This concrete class inherits from an abstract super class that defines the public interface, which acts as your contract to the outside world. In Rails, all of this can be confined into a concern to share this behavior with other objects if necessary. For now though, lets look at at a simple example implementation with just plain old Ruby.
 
