@@ -1,7 +1,7 @@
 base_url = "https://jds.work"
 title = "JDs Work"
 description = "A blog about technology, careers, and personal growth."
-compile_sass = false
+compile_sass = true
 build_search_index = false
 generate_feed = true
 feed_filename = "rss.xml"
@@ -12,16 +12,29 @@ taxonomies = [
     {name = "categories", rss = true},
     {name = "tags", rss = true},
 ]
-highlight_code = true
-highlight_them = "nord"
 
-[extra]
-logo_text = "JDs Work"
-logo_home_link = "/"
-menu_links = [
-  { url = "$BASE_URL/", name = "Blog" },
-  { url = "$BASE_URL/uses/", name = "Uses" },
-  { url = "$BASE_URL/about/", name = "About" },
-]
-github_url = "https://github.com/juliusdelta"
-mastodon_url = "https://fosstodon.org/@Juliusdelta"
+[markdown]
+highlight_code = true
+highlight_theme = "inspired-github"
+
+[extra.expressions]
+pinned = "Written On"
+
+[extra.seo]
+image = "assets/default.jpg"
+
+[[extra.menu]]
+name = "Categories"
+url = "/categories"
+
+[[extra.menu]]
+name = "Tags"
+url = "/tags"
+
+[[extra.menu]]
+name = "Uses"
+url = "/uses"
+
+[[extra.menu]]
+name = "About"
+url = "/about"

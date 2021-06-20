@@ -2,6 +2,7 @@
 title = "What I Use"
 date = 2021-02-05
 path = "uses"
+template = "about/section.html"
 +++
 
 > Note 02-10-2021: This is a tad incomplete. I will be adding more soon!
