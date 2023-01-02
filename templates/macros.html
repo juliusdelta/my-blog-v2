@@ -31,8 +31,8 @@
     <h1 class="catalogue-title">{{ page.title }}</h1>
     <div class="catalogue-line"></div>
     <p>
-      {%- if page.summary -%}
-      {{ page.summary | safe }}
+      {%- if page.description -%}
+      {{ page.description | safe }}
       {% else -%}
       {{ page.content | striptags | truncate(length=280) | safe }}
       {%- endif -%}

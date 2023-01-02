@@ -2,7 +2,7 @@
 title = "Using Run Command in Emacs for RSpec Watch Mode"
 date = 2021-02-02
 slug = "run-command"
-description = "I'm a sucker for small micro-optimizations in my Emacs config. The Run Command package gives plenty of opportunity for that, while also building powerful automation opportunities. Here's the config I came up with for an RSpec watch mode."
+description = "I am a sucker for small micro-optimizations in my Emacs config. The Run Command package gives plenty of opportunity for that, while also building powerful automation opportunities. Here's the config I came up with for an RSpec watch mode."
 draft = false
 
 [taxonomies]
