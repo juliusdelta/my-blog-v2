@@ -2,7 +2,7 @@
 title = "Organizing Work is Hard"
 date = 2019-11-27
 slug = "organizing-work"
-description = "Taking on organizational responsibility for other developers work is hard work in of itself. It's a careful balance of planning, architecture, and confidence."
+description = "Taking on organizational responsibility for other developers work is hard work in of itself. It is a careful balance of planning, architecture, and confidence."
 
 [taxonomies]
 categories = ["career"]
