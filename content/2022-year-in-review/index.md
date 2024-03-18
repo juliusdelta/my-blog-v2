@@ -3,7 +3,7 @@ title = "2022: Year in Review & A Look Ahead"
 date = 2022-12-31
 slug = "/2022-year-in-review"
 description = "2022 was an incredible year for my family. A look back at what happened and a look forward at what will be."
-draft = false
+draft = true
 
 [taxonomies]
 categories = ["goals"]

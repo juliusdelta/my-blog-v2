@@ -1,5 +1,5 @@
 +++
-paginate_by = 10
+paginate_by = 7
 sort_by = "date"
 +++
 

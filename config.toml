@@ -1,16 +1,19 @@
 base_url = "https://jds.work"
 title = "JDs Work"
 description = "A blog about technology, careers, and personal growth."
-compile_sass = true
-build_search_index = false
+author = "JD"
+theme="kita"
+default_language = "en"
 generate_feed = true
 feed_filename = "rss.xml"
+
+build_search_index = false
 external_links_target_blank = true
 external_links_no_follow = true
 external_links_no_referrer = true
 taxonomies = [
-    {name = "categories", rss = true},
-    {name = "tags", rss = true},
+    {name = "categories", rss = true, paginate_by = 5},
+    {name = "tags", rss = true, paginate_by = 5},
 ]
 
 [markdown]
@@ -20,8 +23,19 @@ highlight_theme = "inspired-github"
 [extra.expressions]
 pinned = "Written On"
 
+[extra.profile]
+name = "A Place for Writing about Tech"
+bio = "👋 I'm a developer based in the DFW area of Texas. I write about programming, emacs, and other tech."
+# The URL of avatar.
+avatar_url = "icons/github.svg"
+# Invert color in dark mode.
+avatar_invert = true
+
 [extra.seo]
 image = "assets/default.jpg"
+
+[extra.style]
+header_blur = true
 
 [[extra.menu]]
 name = "Categories"
@@ -30,10 +44,6 @@ url = "/categories"
 [[extra.menu]]
 name = "Tags"
 url = "/tags"
-
-[[extra.menu]]
-name = "Uses"
-url = "/uses"
 
 [[extra.menu]]
 name = "About"
